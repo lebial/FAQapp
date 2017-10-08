@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import { FaqappPage } from './app.po';
 
-describe('faq-app App', () => {
-  let page: AppPage;
+describe('faqapp App', () => {
+  let page: FaqappPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new FaqappPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });

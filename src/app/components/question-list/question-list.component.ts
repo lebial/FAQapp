@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+
 import { Question } from '../../models/Question';
+
 @Component({
   selector: 'app-question-list',
   templateUrl: './question-list.component.html',
@@ -8,12 +10,17 @@ import { Question } from '../../models/Question';
 })
 export class QuestionListComponent implements OnInit {
   questions:Question[];
-  constructor(public dataService:DataService) {
 
+  constructor(public dataService:DataService) { 
+    
   }
 
   ngOnInit() {
     this.questions = this.dataService.getQuestions();
+  }
+
+  addQuestion(question:Question){
+    this.dataService.addQuestion(question);
   }
 
 }
